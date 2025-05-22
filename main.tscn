@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=3 uid="uid://fc6cwpqx7q1y"]
+
+[ext_resource type="Script" uid="uid://bshwchmp67pwm" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://b536k6e7qu1sq" path="res://icon.svg" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://crpns8fcn2ntv" path="res://BatchFactory.cs" id="3_lquwl"]
+[ext_resource type="Script" uid="uid://cswvda64qbhnx" path="res://FollowBatchComponent.cs" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://ds7dqgqer1hw8" path="res://CurvePlacementBatchComponent.cs" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://qmhgsm0q52g0" path="res://Target.cs" id="6_7mycd"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ig7tw"]
+size = Vector2(64, -64)
+
+[sub_resource type="MultiMesh" id="MultiMesh_0xm2m"]
+instance_count = 56
+mesh = SubResource("QuadMesh_ig7tw")
+buffer = PackedFloat32Array(1, 0, 0, 200, 0, 1, 0, 0, 1, 0, 0, 199.984, 0, 1, 0, 2.52679, 1, 0, 0, 199.757, 0, 1, 0, 9.8655, 1, 0, 0, 198.827, 0, 1, 0, 21.6286, 1, 0, 0, 196.481, 0, 1, 0, 37.3538, 1, 0, 0, 191.87, 0, 1, 0, 56.4455, 1, 0, 0, 184.111, 0, 1, 0, 78.1228, 1, 0, 0, 172.396, 0, 1, 0, 101.389, 1, 0, 0, 156.098, 0, 1, 0, 125.034, 1, 0, 0, 134.88, 0, 1, 0, 147.674, 1, 0, 0, 108.775, 0, 1, 0, 167.833, 1, 0, 0, 78.2391, 0, 1, 0, 184.062, 1, 0, 0, 44.149, 0, 1, 0, 195.066, 1, 0, 0, 7.75357, 0, 1, 0, 199.85, 1, 0, 0, -29.4302, 0, 1, 0, 197.823, 1, 0, 0, -65.7599, 0, 1, 0, 188.88, 1, 0, 0, -99.6315, 0, 1, 0, 173.417, 1, 0, 0, -129.641, 0, 1, 0, 152.293, 1, 0, 0, -154.72, 0, 1, 0, 126.735, 1, 0, 0, -174.228, 0, 1, 0, 98.2072, 1, 0, 0, -187.991, 0, 1, 0, 68.2607, 1, 0, 0, -196.281, 0, 1, 0, 38.3914, 1, 0, 0, -199.754, 0, 1, 0, 9.92004, 1, 0, 0, -199.352, 0, 1, 0, -16.0863, 1, 0, 0, -196.191, 0, 1, 0, -38.8466, 1, 0, 0, -191.449, 0, 1, 0, -57.8545, 1, 0, 0, -186.269, 0, 1, 0, -72.8279, 1, 0, 0, -181.675, 0, 1, 0, -83.6313, 1, 0, 0, -178.512, 0, 1, 0, -90.1851, 1, 0, 0, -177.391, 0, 1, 0, -92.371, 1, 0, 0, -178.246, 0, 1, 0, -90.7096, 1, 0, 0, -180.62, 0, 1, 0, -85.887, 1, 0, 0, -184.18, 0, 1, 0, -77.9594, 1, 0, 0, -188.462, 0, 1, 0, -66.9476, 1, 0, 0, -192.883, 0, 1, 0, -52.8773, 1, 0, 0, -196.766, 0, 1, 0, -35.8222, 1, 0, 0, -199.363, 0, 1, 0, -15.9482, 1, 0, 0, -199.896, 0, 1, 0, 6.44918, 1, 0, 0, -197.596, 0, 1, 0, 30.9151, 1, 0, 0, -191.759, 0, 1, 0, 56.8189, 1, 0, 0, -181.802, 0, 1, 0, 83.354, 1, 0, 0, -167.322, 0, 1, 0, 109.56, 1, 0, 0, -148.147, 0, 1, 0, 134.359, 1, 0, 0, -124.378, 0, 1, 0, 156.621, 1, 0, 0, -96.4087, 0, 1, 0, 175.229, 1, 0, 0, -64.9245, 0, 1, 0, 189.169, 1, 0, 0, -30.8731, 0, 1, 0, 197.603, 1, 0, 0, 4.58822, 0, 1, 0, 199.947, 1, 0, 0, 40.169, 0, 1, 0, 195.925, 1, 0, 0, 74.5361, 0, 1, 0, 185.592, 1, 0, 0, 106.409, 0, 1, 0, 169.343, 1, 0, 0, 134.655, 0, 1, 0, 147.878, 1, 0, 0, 158.365, 0, 1, 0, 122.15, 1, 0, 0, 176.911, 0, 1, 0, 93.2878, 1, 0, 0, 189.98, 0, 1, 0, 62.5099, 1, 0, 0, 197.577, 0, 1, 0, 31.0351)
+
+[sub_resource type="Curve" id="Curve_1bvp3"]
+_limits = [0.0, 6.28, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.517606, 3.62168), 0.0, 0.0, 0, 0, Vector2(1, 0), -8.53188, 0.0, 0, 0]
+point_count = 3
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0xm2m")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(575, 303)
+
+[node name="HordeBatch" type="MultiMeshInstance2D" parent="Node2D"]
+multimesh = SubResource("MultiMesh_0xm2m")
+texture = ExtResource("1_ig7tw")
+script = ExtResource("3_lquwl")
+Count = 56
+
+[node name="CurvePlacementBatchComponent" type="Node2D" parent="Node2D/HordeBatch"]
+script = ExtResource("5_lquwl")
+Radius = 200.0
+Curve = SubResource("Curve_1bvp3")
+metadata/_custom_type_script = "uid://ds7dqgqer1hw8"
+
+[node name="FollowBatchComponent" type="Node2D" parent="Node2D/HordeBatch" node_paths=PackedStringArray("Target")]
+script = ExtResource("4_1bvp3")
+Target = NodePath("../../../Target")
+metadata/_custom_type_script = "uid://cswvda64qbhnx"
+
+[node name="Target" type="Node2D" parent="."]
+position = Vector2(659, 103)
+script = ExtResource("6_7mycd")
